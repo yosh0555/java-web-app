@@ -1,6 +1,6 @@
 FROM ubuntu
 
-RUN apt-get update
+RUN apt-get update -y
 
 RUN apt-get install openjdk-8-jdk wget -y
 
@@ -16,5 +16,5 @@ COPY target/welcomeapp.war /opt/tomcat/webapps/
 
 EXPOSE 8080
 
-CMD ["/opt/tomcat/bin/catalina.sh", "RUN"]
+CMD ["/opt/tomcat/bin/catalina.sh", "run"]
 
